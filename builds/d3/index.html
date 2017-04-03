@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualization</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h2>Weather Forecast: <span class="small">Orlando</span></h2>
+      <table class="table table table-hover">
+        <thead>
+          <tr class="head">
+            <th scope="col" class="head-date">Date</th>
+            <th scope="col" class="head-temp-low">Low</th>
+            <th scope="col" class="head-temp-high">High</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="day">
+            <th scope="row" class="day-date">03/30/2017</th>
+            <td class="day-low"><span class="temp">87</span>&deg; <span class="notation">F</span></td>
+            <td class="day-high"><span class="temp">68</span>&deg; <span class="notation">F</span></td>
+          </tr>
+          <tr class="day">
+            <th scope="row" class="day-date">04/01/2017</th>
+            <td class="day-low"><span class="temp">64</span>&deg; <span class="notation">F</span></td>
+            <td class="day-high"><span class="temp">85</span>&deg; <span class="notation">F</span></td>
+          </tr>
+          <tr class="day">
+            <th scope="row"class="day-date">04/02/2017</th>
+            <td class="day-low"><span class="temp">65</span>&deg; <span class="notation">F</span></td>
+            <td class="day-high"><span class="temp">89</span>&deg; <span class="notation">F</span></td>
+          </tr>
+          <tr class="day">
+            <th scope="row"class="day-date">04/03/2017</th>
+            <td class="day-low"><span class="temp">69</span>&deg; <span class="notation">F</span></td>
+            <td class="day-high"><span class="temp">90</span>&deg; <span class="notation">F</span></td>
+          </tr>
+          <tr class="day">
+            <th scope="row"class="day-date">04/04/2017</th>
+            <td class="day-low"><span class="temp">65</span>&deg; <span class="notation">F</span></td>
+            <td class="day-high"><span class="temp">88</span>&deg; <span class="notation">F</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div id="viz"></div>
+
+    </div><!-- container -->
+    <script src="js/libraries/jquery/jquery.min.js"></script>
+    <script src="js/libraries/bootstrap/bootstrap.min.js"></script>
+    <script src="js/libraries/d3/d3.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
