@@ -1,23 +1,13 @@
-d3.selectAll("tr:nth-child(4) .day-high")
-  .append('span')
-  .html('hot')
-
-  // .style('background', 'red')
-  // .style('padding', '3px')
-  // .style('margin-left', '3px')
-  // .style('border-radius', '3px')
-  // .style('color', 'white')
-
-  .classed('label label-danger', true)
-  .classed('label-danger', false)
-  .classed('label-warning', true)
-  .style('margin-left', '3px')
-
-d3.select('h2 span')
-  .classed('small', false)
-
-d3.selectAll('tr')
-  .insert('td', ':first-child')
-  .append('input')
-  .attr('type', 'checkbox')
-  .property('checked', true)
+d3.selectAll(".day-high .temp")
+  .data([45, 78, 77, 66, 76])
+  .html(function(d, i) {
+    if(i==0) {
+      return '<strong class="text-muted" style="font-size: 2rem">' + d + '</strong>';
+    } else {
+      if (d >= 77) {
+        return '<strong class="text-danger">' + d + '</strong>';
+      } else {
+        return '<strong>' + d + '</strong>';
+      }
+    }
+  })
