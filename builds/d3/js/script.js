@@ -2,9 +2,7 @@ d3.json('js/data/forecast.json', function(d) {
 
   var temperatures = [],
       height = 400,
-      width = 600,
-      barWidth = 50,
-      barOffset = 5;
+      width = 600;
 
   var   tempColor,
         yScale,
@@ -23,17 +21,13 @@ d3.json('js/data/forecast.json', function(d) {
 
   xScale = d3.scaleBand()
     .domain(temperatures)
-    .paddingInner(.3)
+    .paddingInner(.1)
     .paddingOuter(.1)
     .range([0, width])
 
   colors = d3.scaleLinear()
-    .domain([0, temperatures.length *.33,
-                temperatures.length *.66,
-                temperatures.length
-                ])
-    .range(['#B58929', '#C61C6F',
-            '#268BD2', '#85992C'])
+    .domain([0, 65, d3.max(temperatures)])
+    .range(['#FFFFFF', '#2D8BCF', '#DA3637'])
 
   tooltip = d3.select('body')
     .append('div')
@@ -47,9 +41,7 @@ d3.json('js/data/forecast.json', function(d) {
     .attr('height', height)
     .selectAll('rect').data(temperatures)
     .enter().append('rect')
-      .attr('fill', function(d, i) {
-        return colors(i)
-      })
+      .attr('fill', colors)
       .attr('width', function(d) {
         return xScale.bandwidth();
       })
@@ -62,7 +54,10 @@ d3.json('js/data/forecast.json', function(d) {
       .on('mouseover', function(d) {
         tooltip.transition().duration(200)
           .style('opacity', .9)
-        tooltip.html(d)
+        tooltip.html(
+          '<div style="font-size: 2rem; font-weight: bold">' +
+            d + '&deg;</div>'
+        )
           .style('left', (d3.event.pageX -35) + 'px')
           .style('top', (d3.event.pageY -30) + 'px')
         tempColor = this.style.fill;
@@ -71,6 +66,7 @@ d3.json('js/data/forecast.json', function(d) {
       })
 
       .on('mouseout', function(d) {
+        tooltip.html('')
         d3.select(this)
           .style('fill', tempColor)
       });
