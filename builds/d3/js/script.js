@@ -6,6 +6,8 @@ d3.json('js/data/forecast.json', function(d) {
 
   var   tempColor,
         yScale,
+        yAxisValues,
+        yAxisTicks,
         xScale,
         colors,
         tooltip,
@@ -18,6 +20,13 @@ d3.json('js/data/forecast.json', function(d) {
   yScale = d3.scaleLinear()
     .domain([0, d3.max(temperatures)])
     .range([0,height]);
+
+  yAxisValues = d3.scaleLinear()
+    .domain([0, d3.max(temperatures)])
+    .range([height,0]);
+
+  yAxisTicks = d3.axisLeft(yAxisValues)
+  .ticks(10)
 
   xScale = d3.scaleBand()
     .domain(temperatures)
@@ -39,6 +48,7 @@ d3.json('js/data/forecast.json', function(d) {
   myChart = d3.select('#viz').append('svg')
     .attr('width', width)
     .attr('height', height)
+    .append('g')
     .selectAll('rect').data(temperatures)
     .enter().append('rect')
       .attr('fill', colors)
@@ -70,6 +80,10 @@ d3.json('js/data/forecast.json', function(d) {
         d3.select(this)
           .style('fill', tempColor)
       });
+
+  yGuide = d3.select('#viz svg').append('g')
+            .attr('transform', 'translate(20,0)')
+            .call(yAxisTicks)
 
   myChart.transition()
     .attr('height', function(d) {
