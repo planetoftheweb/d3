@@ -14,23 +14,23 @@ For more help setting up a comprehensive Gulp.js workflow, check out [Web Projec
 ## Slides
 There are some [slides](http://www.raybo.org/d3) associated with this course.
 
-- [What is d3](http://www.raybo.org/d3?d=01_01_What is d3&)
+- [What is d3](http://www.raybo.org/d3?d=01_01_What%20is%20d3&)
 - [Basic Selection](http://www.raybo.org/d3?d=01_02_Basic_Selection&)
-- [Controlling HTML in Selections](http://www.raybo.org/d3?d=01_03_Controlling HTML in Selections&)
-- [Modifying AttributesCSS](http://www.raybo.org/d3?d=01_04_Modifying AttributesCSS&)
-- [Binding data to the DOM](http://www.raybo.org/d3?d=01_05_Binding data to the DOM&)
-- [Queuing Selections with Enter](http://www.raybo.org/d3?d=01_06_Queuing Selections with Enter&)
-- [Drawing with SVG](http://www.raybo.org/d3?d=02_01_Drawing with SVG&)
-- [Understanding SVG Primitives](http://www.raybo.org/d3?d=02_02_Understanding SVG Primitives&)
-- [Drawing SVG graphics with D3](http://www.raybo.org/d3?d=02_03 Drawing SVG graphics with D3&)
-- [Creating a simple barchart](http://www.raybo.org/d3?d=02_04_Creating a simple barchart&)
-- [LinearScale](http://www.raybo.org/d3?d=03_01 LinearScale&)
-- [Ordinal Scales](http://www.raybo.org/d3?d=03_02 Ordinal Scales&)
+- [Controlling HTML in Selections](http://www.raybo.org/d3?d=01_03_Controlling%20HTML%20in%20Selections&)
+- [Modifying AttributesCSS](http://www.raybo.org/d3?d=01_04_Modifying%20AttributesCSS&)
+- [Binding data to the DOM](http://www.raybo.org/d3?d=01_05_Binding%20data%20to%20the%20DOM&)
+- [Queuing Selections with Enter](http://www.raybo.org/d3?d=01_06_Queuing%20Selections%20with%20Enter&)
+- [Drawing with SVG](http://www.raybo.org/d3?d=02_01_Drawing%20with%20SVG&)
+- [Understanding SVG Primitives](http://www.raybo.org/d3?d=02_02_Understanding%20SVG%20Primitives&)
+- [Drawing SVG graphics with D3](http://www.raybo.org/d3?d=02_03%20Drawing%20SVG%20graphics%20with%20D3&)
+- [Creating a simple barchart](http://www.raybo.org/d3?d=02_04_Creating%20a%20simple%20barchart&)
+- [LinearScale](http://www.raybo.org/d3?d=03_01%20LinearScale&)
+- [Ordinal Scales](http://www.raybo.org/d3?d=03_02%20Ordinal%20Scales&)
 - [Events](http://www.raybo.org/d3?d=03_04_events&)
 - [Transitions](http://www.raybo.org/d3?d=03_05b_transitions&)
-- [Adding Data](http://www.raybo.org/d3?d=04_01 Adding Data&)
-- [Meaninful Guides](http://www.raybo.org/d3?d=04_03 Meaninful Guides&)
-- [Time Based Guides](http://www.raybo.org/d3?d=04_05 Time Based Guides&)
+- [Adding Data](http://www.raybo.org/d3?d=04_01%20Adding%20Data&)
+- [Meaninful Guides](http://www.raybo.org/d3?d=04_03%20Meaninful%20Guides&)
+- [Time Based Guides](http://www.raybo.org/d3?d=04_05%20Time%20Based%20Guides&)
 
 ## More Stuff
 If you want to see some of my other courses, then check out [raybo.org](http://www.raybo.org/). Get in touch with me at [LinkedIn](https://www.linkedin.com/in/planetoftheweb/) or [follow me on twitter](http://twitter.com/planetoftheweb).
