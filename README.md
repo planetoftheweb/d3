@@ -1,7 +1,3 @@
-This is the repository for my course, Learning Data Visualization with D3.js on LinkedIn Learning and Lynda.com.
-
-tutorial, training, linkedinlearning, lynda, lynda-com, rayvillalobos
-
 # Learning Data Visualization with D3.js
 This is the repository for my course Learning Data Visualization with D3.js. The full course is available on [LinkedIn Learning](https://www.linkedin.com/learning/learning-data-visualization-with-d3-js?trk=insiders_6787408_learning) and [Lynda.com](https://www.lynda.com/D3-js-tutorials/Learning-Data-Visualization-D3-js/594451-2.html)
 
