@@ -6,31 +6,34 @@ const gulp = require('gulp'),
 
   dest = 'builds/d3/';
 
-  gulp.task('html', function() {
-    gulp.src(dest + '*.html');
-  });
+  function html(cb) {
+    gulp.src(dest + "*.html");
+    cb();
+  }
 
-  gulp.task('css', function() {
-    gulp.dest(dest + 'css');
-  });
+  function css(cb) {
+    gulp.dest(dest + "css");
+    cb();
+  }
 
-  gulp.task('js', function() {
-    gulp.dest(dest + 'js');
-  });
+  function js(cb) {
+    gulp.dest(dest + "js");
+    cb();
+  }
 
-  gulp.task('watch', function() {
-    gulp.watch(dest + '**/*.css', ['css']);
-    gulp.watch(dest + '**/*.js', ['js']);
-    gulp.watch(dest + '**/*.html', ['html']);
-  });
+  function watch() {
+    gulp.watch(dest + '**/*.css', gulp.series(css));
+    gulp.watch(dest + '**/*.js', gulp.series(js));
+    gulp.watch(dest + '**/*.html', gulp.series(html));
+  }
 
-gulp.task('webserver', function() {
+function startWebserver() {
   gulp.src(dest)
     .pipe(webserver({
       livereload: true,
       port: 3000,
       open: true
     }));
-});
+}
 
-gulp.task('default', ['html', 'css', 'webserver','watch']);
+exports.default = gulp.series(html, css, startWebserver, watch);
